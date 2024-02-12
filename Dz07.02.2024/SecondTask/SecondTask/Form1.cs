@@ -28,6 +28,17 @@ namespace SecondTask {
             await connect.CloseAsync();
             MessageBox.Show("Отключено от БД.");
         }
+        private async void ExecuteCommand() {
+            SqlDataReader reader = await command.ExecuteReaderAsync();
+            ListBox.DataSource = null;
+            ListBox.Items.Clear();
+            while (await reader.ReadAsync()) {
+                for (int i = 0; i < reader.FieldCount; i++) {
+                    ListBox.Items.Add(reader[i].ToString() + "  ");
+                }
+            }
+            await reader.CloseAsync();
+        }
         private async void btn_execute_Click(object sender, EventArgs e) {
             //command.CommandText = "Select * from Products";
             //command.CommandText = "Select type from Products";
@@ -40,15 +51,7 @@ namespace SecondTask {
             //command.CommandText = "SELECT P.* FROM Products P INNER JOIN Delivery D ON P.id = D.product_id WHERE D.provider_id IS NOT NULL";
             //command.CommandText = "SELECT P.* FROM Products P INNER JOIN Delivery D ON P.id = D.product_id WHERE D.delivery_date = (SELECT MIN(delivery_date) FROM Delivery)";
             //command.CommandText = "SELECT P.type, AVG(D.quantity) AS avg_quantity FROM Products P INNER JOIN Delivery D ON P.id = D.product_id GROUP BY P.type";
-            SqlDataReader reader = await command.ExecuteReaderAsync();
-            ListBox.DataSource = null;
-            ListBox.Items.Clear();
-            while (await reader.ReadAsync()) {
-                string res = "";
-                for (int i = 0; i < reader.FieldCount; i++) res += reader[i].ToString() + "  ";
-                ListBox.Items.Add(res);
-            }
-            await reader.CloseAsync();
+            ExecuteCommand();
         }
     }
 }
