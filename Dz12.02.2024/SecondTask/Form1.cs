@@ -63,13 +63,17 @@ namespace SecondTask {
                 switch (itemName)
                 {
                     case "menu10":
-                        command.CommandText = "SELECT Products.id AS Product_ID, " +
-                        "Products.title AS ProductTitle, Products.type AS ProductType, Products.cost_price AS CostPrice," +
-                        "Providers.id as Provider_ID, Providers.title AS ProviderTitle, " +
-                        "Delivery.quantity AS Quantity, Delivery.delivery_date AS DeliveryDate " +
-                        "FROM Products " +
-                        "LEFT JOIN Delivery ON Products.id = Delivery.product_id " +
-                        "LEFT JOIN Providers ON Providers.id = Delivery.provider_id;";
+                        command.CommandText = "SELECT " +
+                        "ProductTypes.id AS ProductTypeID, ProductTypes.types AS ProductType, " +
+                        "Products.id AS ProductID, Products.title AS ProductTitle, Products.cost_price AS CostPrice, " +
+                        "Providers.id AS ProviderID, Providers.title AS ProviderTitle, " +
+                        "Delivery.id AS DeliveryID, Delivery.product_id AS DeliveryProductID, " +
+                        "Delivery.provider_id AS DeliveryProviderID, Delivery.quantity AS DeliveryQuantity, " +
+                        "Delivery.delivery_date AS DeliveryDate " +
+                        "FROM ProductTypes " +
+                        "JOIN Products ON ProductTypes.id = Products.ptype_id " +
+                        "JOIN Delivery ON Products.id = Delivery.product_id " +
+                        "JOIN Providers ON Providers.id = Delivery.provider_id;";
                         break;
                     case "menu1":
                         text1.Enabled = text2.Enabled = text3.Enabled = btn_add.Enabled = true;
