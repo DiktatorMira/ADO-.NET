@@ -42,3 +42,216 @@ Insert into Companies values ('ÎÎÎ "ÎôèñÑåðâèñ"', 'info@officeservice.com'),
 
 Insert into Sales values (1, 1, 1, 50, 75.0, '2024-02-14'),
 (2, 2, 2, 20, 200.0, '2024-02-15'),(3, 3, 3, 30, 60.0, '2024-02-16');
+
+Go CREATE PROCEDURE GetAllTablesData
+AS BEGIN
+    SELECT Sales.sales_number, Products.title AS product_title,
+    Products.type, Products.amount, Products.price,
+    Managers.name AS manager_name, Managers.surname AS manager_surname,
+    Managers.email AS manager_email, Companies.title AS company_title,
+    Companies.email AS company_email, Sales.sale_date
+    FROM Sales JOIN Products ON Sales.product_id = Products.id
+    JOIN Managers ON Sales.manager_id = Managers.id
+    JOIN Companies ON Sales.company_id = Companies.id;
+END;
+
+Go CREATE FUNCTION GetProductTypes()
+RETURNS TABLE AS RETURN (
+    SELECT DISTINCT type
+    FROM Products
+);
+Go CREATE FUNCTION GetSalesManagers()
+RETURNS TABLE AS RETURN (
+    SELECT DISTINCT
+        m.id AS ManagerId,
+        m.name AS ManagerName,
+        m.surname AS ManagerSurname,
+        m.email AS ManagerEmail
+    FROM
+        Sales s
+        INNER JOIN Managers m ON s.manager_id = m.id
+);
+Go CREATE FUNCTION GetProductsMaxQuantity()
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    WHERE p.amount = (SELECT MAX(amount) FROM Products)
+);
+Go CREATE FUNCTION GetProductsMinQuantity()
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    WHERE p.amount = (SELECT MIN(amount) FROM Products)
+);
+Go CREATE FUNCTION GetProductsMinCost()
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    WHERE p.price = (SELECT MIN(price) FROM Products)
+);
+Go CREATE FUNCTION GetProductsMaxCost()
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    WHERE p.price = (SELECT MAX(price) FROM Products)
+);
+Go CREATE FUNCTION GetProductsByType(@productType NVARCHAR(50))
+RETURNS TABLE AS RETURN (
+    SELECT p.type AS ProductType
+    FROM Products p
+    WHERE p.type = @productType
+);
+Go CREATE FUNCTION GetProductsSoldByManager(@managerId INT)
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    JOIN Sales s ON p.id = s.product_id
+    WHERE s.manager_id = @managerId
+);
+Go CREATE FUNCTION GetProductsPurchasedByCompany(@companyId INT)
+RETURNS TABLE AS RETURN (
+    SELECT p.id AS ProductId,
+           p.title AS ProductTitle,
+           p.type AS ProductType,
+           p.amount AS ProductAmount,
+           p.price AS ProductPrice
+    FROM Products p
+    JOIN Sales s ON p.id = s.product_id
+    WHERE s.company_id = @companyId
+);
+Go CREATE FUNCTION GetLatestSalesInfo()
+RETURNS TABLE AS RETURN (
+    SELECT 
+        p.id AS ProductId,
+        p.title AS ProductTitle,
+        p.type AS ProductType,
+        p.amount AS ProductAmount,
+        p.price AS ProductPrice,
+        s.id AS SaleId,
+        s.sales_number AS SaleNumber,
+        s.price AS SalePrice,
+        s.sale_date AS SaleDate,
+        ROW_NUMBER() OVER (PARTITION BY p.id ORDER BY s.sale_date DESC) AS RowNum
+    FROM 
+        Products p
+        JOIN Sales s ON p.id = s.product_id
+);
+Go CREATE FUNCTION GetAverageProductAmountByType()
+RETURNS TABLE AS RETURN (
+    SELECT 
+        p.type AS ProductType,
+        AVG(p.amount) AS AverageProductAmount
+    FROM 
+        Products p
+    GROUP BY 
+        p.type
+);
+
+Go CREATE PROCEDURE AddProduct
+    @Title NVARCHAR(50),
+    @Type NVARCHAR(50),
+    @Amount INT,
+    @Price DECIMAL(10,2)
+AS
+BEGIN
+    INSERT INTO Products (title, type, amount, price)
+    VALUES (@Title, @Type, @Amount, @Price);
+END
+
+Go CREATE PROCEDURE InsertTypeProduct
+    @Type NVARCHAR(50)
+AS BEGIN
+    INSERT INTO Products (type)
+    VALUES (@Type);
+END
+
+Go CREATE PROCEDURE AddManager
+    @Name NVARCHAR(50),
+    @Surname NVARCHAR(50),
+    @Email NVARCHAR(50)
+AS BEGIN
+    INSERT INTO Managers VALUES (@Name, @Surname, @Email);
+END
+
+Go CREATE PROCEDURE AddCompany
+    @Title NVARCHAR(50), @Email NVARCHAR(50)
+AS BEGIN
+    INSERT INTO Companies VALUES (@Title, @Email);
+END
+
+Go CREATE PROCEDURE UpdateProduct
+	@Title nvarchar(50), @Type nvarchar(50),
+	@Amount int, @Price decimal(10,2)
+AS BEGIN
+     UPDATE Products SET title = @Title, type = @Type,
+     amount = @Amount, @Price = price WHERE id = id;
+END
+
+Go CREATE PROCEDURE UpdateCompanies
+	@Title nvarchar(50), @Email nvarchar(50)
+AS BEGIN
+     UPDATE Companies SET title = @Title, email = @Email
+     WHERE id = id;
+END
+
+Go CREATE PROCEDURE UpdateManagers
+	@Name nvarchar(50), @Surname nvarchar(50), @Email nvarchar(50)
+AS BEGIN
+     UPDATE Managers SET name = @Name, surname = @Surname, 
+	 email = @Email WHERE id = id;
+END
+
+Go CREATE PROCEDURE UpdateTypeProduct
+	@Type nvarchar(50)
+AS BEGIN
+     UPDATE Products SET type = @Type
+     WHERE id = id;
+END
+
+Go CREATE PROCEDURE DeleteProduct
+    @ProductId int
+AS BEGIN
+    DELETE FROM Products
+    WHERE id = @ProductId;
+END
+
+Go CREATE PROCEDURE DeleteManager
+    @ManagerId int
+AS BEGIN
+    DELETE FROM Managers
+    WHERE id = @ManagerId;
+END
+
+Go CREATE PROCEDURE DeleteTypeProduct
+    @Type nvarchar(50)
+AS BEGIN
+    DELETE FROM Products
+    WHERE type = @Type;
+END
+
+Go CREATE PROCEDURE DeleteCompany
+    @CompanyId int
+AS BEGIN
+    DELETE FROM Companies
+    WHERE id = @CompanyId;
+END

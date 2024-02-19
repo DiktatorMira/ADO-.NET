@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Dz12.02.2024\\SecondTask\\SecondTask.csproj": {}
+    "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz14.02.2024\\SecondTask\\SecondTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Dz12.02.2024\\SecondTask\\SecondTask.csproj": {
+    "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz14.02.2024\\SecondTask\\SecondTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Dz12.02.2024\\SecondTask\\SecondTask.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz14.02.2024\\SecondTask\\SecondTask.csproj",
         "projectName": "SecondTask",
-        "projectPath": "C:\\Users\\User\\Desktop\\Dz12.02.2024\\SecondTask\\SecondTask.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz14.02.2024\\SecondTask\\SecondTask.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Dz12.02.2024\\SecondTask\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz14.02.2024\\SecondTask\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
