@@ -31,13 +31,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
+              "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz12.02.2024\\SecondTask\\Form1.cs",
               "RelativeDocumentMoniker": "SecondTask\\Form1.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz12.02.2024\\SecondTask\\Form1.cs",
-              "RelativeToolTip": "SecondTask\\Form1.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz12.02.2024\\SecondTask\\Form1.cs [Design]",
+              "RelativeToolTip": "SecondTask\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-12T16:54:52.291Z"
+              "WhenOpened": "2024-02-12T16:54:52.291Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -47,9 +48,10 @@
               "RelativeDocumentMoniker": "SecondTask\\Form1.cs",
               "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz12.02.2024\\SecondTask\\Form1.cs",
               "RelativeToolTip": "SecondTask\\Form1.cs",
-              "ViewState": "AQIAAGEAAAAAAAAAAAAUwHAAAAA7AAAA",
+              "ViewState": "AQIAAHwAAAAAAAAAAAAUwJEAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-12T16:54:52.338Z"
+              "WhenOpened": "2024-02-12T16:54:52.338Z",
+              "EditorCaption": ""
             }
           ]
         }
