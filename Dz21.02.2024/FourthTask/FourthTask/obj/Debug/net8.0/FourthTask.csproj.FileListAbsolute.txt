@@ -1,0 +1,14 @@
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\bin\Debug\net8.0\FourthTask.exe
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\bin\Debug\net8.0\FourthTask.deps.json
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\bin\Debug\net8.0\FourthTask.runtimeconfig.json
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\bin\Debug\net8.0\FourthTask.dll
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\bin\Debug\net8.0\FourthTask.pdb
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.AssemblyInfo.cs
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.dll
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\refint\FourthTask.dll
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.pdb
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\FourthTask.genruntimeconfig.cache
+C:\Users\User\Desktop\Dz21.02.2024\FourthTask\FourthTask\obj\Debug\net8.0\ref\FourthTask.dll
