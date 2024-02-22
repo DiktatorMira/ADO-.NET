@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dz19.02.2023")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff6494b75b8c0c0407166b0bf7c534e59e49ff81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bf661d9ea3960c5ad82dee85103583048dd2f20")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dz19.02.2023")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dz19.02.2023")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

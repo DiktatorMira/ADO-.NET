@@ -1,5 +1,0 @@
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Initial Catalog=Storage;Data Source=DESKTOP-D5SHCUS\\MSSQLSERVER2022;Integrated Security=SSPI"
-  }
-}
