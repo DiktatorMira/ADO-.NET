@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\bin\Debug\net8.0\Tables.deps.json
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\bin\Debug\net8.0\Tables.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\bin\Debug\net8.0\Tables.pdb
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.AssemblyInfo.cs
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.sourcelink.json
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\refint\Tables.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\Tables.pdb
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\Tables\obj\Debug\net8.0\ref\Tables.dll

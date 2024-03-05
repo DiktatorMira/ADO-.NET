@@ -1,0 +1,16 @@
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\bin\Debug\net8.0\TablesContext.deps.json
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\bin\Debug\net8.0\TablesContext.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\bin\Debug\net8.0\TablesContext.pdb
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\bin\Debug\net8.0\Tables.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\bin\Debug\net8.0\Tables.pdb
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.AssemblyInfo.cs
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.sourcelink.json
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesCo.E8D3D46D.Up2Date
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\refint\TablesContext.dll
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\TablesContext.pdb
+C:\Users\User\Desktop\Моя база\Программирование\Репозитории\ADO.NET\Dz28.02.2024\TablesContext\obj\Debug\net8.0\ref\TablesContext.dll
