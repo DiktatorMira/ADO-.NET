@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|C:\\Users\\User\\Desktop\\Dz04.03.2024\\dz04.03.2024\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|c:\\users\\user\\desktop\\dz04.03.2024\\dz04.03.2024\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\app.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|c:\\users\\user\\desktop\\dz04.03.2024\\dz04.03.2024\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\dz04.03.2024\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\dz04.03.2024\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ado.net\\dz04.03.2024\\dz04.03.2024\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\dz04.03.2024\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|c:\\users\\user\\desktop\\\u043C\u043E\u044F \u0431\u0430\u0437\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0440\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ado.net\\dz04.03.2024\\dz04.03.2024\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3373330D-2438-49A0-9A3E-5D051DC16C98}|Dz04.03.2024\\Dz04.03.2024.csproj|solutionrelative:dz04.03.2024\\viewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +30,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Dz04.03.2024\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\MainWindow.xaml",
               "RelativeToolTip": "Dz04.03.2024\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-04T09:15:54.554Z",
@@ -39,15 +47,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Dz04.03.2024\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\App.xaml.cs",
-              "RelativeToolTip": "Dz04.03.2024\\App.xaml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBkAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Commands.cs",
+              "RelativeDocumentMoniker": "Dz04.03.2024\\Commands.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Commands.cs",
+              "RelativeToolTip": "Dz04.03.2024\\Commands.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T13:01:11.836Z",
+              "WhenOpened": "2024-03-07T20:54:48.095Z",
               "EditorCaption": ""
             },
             {
@@ -60,13 +68,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\App.xaml",
+              "RelativeDocumentMoniker": "Dz04.03.2024\\App.xaml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\App.xaml",
+              "RelativeToolTip": "Dz04.03.2024\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-06T14:13:45.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Dz04.03.2024\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\App.xaml.cs",
+              "RelativeToolTip": "Dz04.03.2024\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwAsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T14:10:28.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ViewModels.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\ViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\ViewModels.cs",
               "RelativeDocumentMoniker": "Dz04.03.2024\\ViewModels.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\ViewModels.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\\u041C\u043E\u044F \u0431\u0430\u0437\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u0420\u0435\u043F\u043E\u0437\u0438\u0442\u043E\u0440\u0438\u0438\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\ViewModels.cs",
               "RelativeToolTip": "Dz04.03.2024\\ViewModels.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAwOMAAAAcAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwF8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-05T10:17:03.923Z",
               "EditorCaption": ""

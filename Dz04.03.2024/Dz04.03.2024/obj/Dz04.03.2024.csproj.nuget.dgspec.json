@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj": {}
+    "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj": {
+    "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj",
         "projectName": "Dz04.03.2024",
-        "projectPath": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj",
+        "projectPath": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\Dz04.03.2024.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\Desktop\\Dz04.03.2024\\Dz04.03.2024\\obj\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Моя база\\Программирование\\Репозитории\\ADO.NET\\Dz04.03.2024\\Dz04.03.2024\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -55,6 +55,12 @@
               "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
             },

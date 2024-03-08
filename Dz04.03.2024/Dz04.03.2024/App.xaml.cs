@@ -8,20 +8,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Dz04._03._2024 {
     public partial class App : Application {
-        protected override void OnStartup(StartupEventArgs e) {
+        private void OnStartup(object sender, StartupEventArgs e) {
             try {
-                base.OnStartup(e);
                 Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture = new CultureInfo("ua-UA");
-                using (var context = new Context()) {
-                    var main = new MainVM(context.authors, context.books);
+                using (var context = new AuthorsAndBooksContext()) {
                     MainWindow view = new MainWindow();
-                    MainWindow = view;
-                    view.DataContext = main;
+                    view.DataContext = new MainVM(context.Authors, context.Books); ;
                     view.Show();
                 }
             }
             catch (DbException ex) { MessageBox.Show("Ошибка подключения к бд: " + ex.Message); }
-            catch (Exception ex) { MessageBox.Show("Ошибка приложения: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Ошибка: " + ex.Message); }
         }
     }
 }

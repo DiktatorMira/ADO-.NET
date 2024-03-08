@@ -22,9 +22,9 @@ namespace Dz04._03._2024 {
         public ObservableCollection<BooksVM>? templistBooks { get; set; }
         private string fullname, title, editbook, editauthor;
         private bool isbook = false, isauthor = false, issafe = false, iscombo = true, isexecute = true, isfilter = false;
-        private int selectedAuthor = -1, selectedBook = -1 , value;
+        private int selectedAuthor = -1, selectedBook = -1, value;
         private Command saveChanges, addAuthor, editAuthor, deleteAuthor, addBook, editBook, deleteBook;
-        public MainVM(IQueryable<AuthorsM> authors, IQueryable<BooksM> books) {
+        public MainVM(IQueryable<Author> authors, IQueryable<Book> books) {
             listAuthors = new ObservableCollection<AuthorsVM>(authors.Select(a => new AuthorsVM(a)));
             listBooks = new ObservableCollection<BooksVM>(books.Select(b => new BooksVM(b)));
             templistBooks = listBooks;
@@ -41,7 +41,7 @@ namespace Dz04._03._2024 {
             switch (value) {
                 case 0:
                     if (EditAuthor.IsNullOrEmpty()) return;
-                    AuthorsVM newAuthor = new AuthorsVM(new AuthorsM { FullName = EditAuthor });
+                    AuthorsVM newAuthor = new AuthorsVM(new Author { FullName = EditAuthor });
                     listAuthors?.Add(newAuthor);
                     break;
                 case 1:
@@ -50,7 +50,7 @@ namespace Dz04._03._2024 {
                     break;
                 case 2:
                     if (EditBook.IsNullOrEmpty()) return;
-                    BooksVM newBook = new BooksVM(new BooksM { Title = EditBook, AuthorId = listAuthors?[SelectedAuthor].Id });
+                    BooksVM newBook = new BooksVM(new Book { Title = EditBook, AuthorId = listAuthors[SelectedAuthor].Id });
                     listBooks?.Add(newBook);
                     break;
                 case 3:
@@ -95,7 +95,7 @@ namespace Dz04._03._2024 {
         private void DelAuthor() {
             DialogResult res = MessageBox.Show("Вы точно хотите удалить автора? Все его книги тоже удалятся.", "Авторы и книги",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(res == DialogResult.Yes) {
+            if (res == DialogResult.Yes) {
                 listAuthors?.Remove(listAuthors?[SelectedAuthor]);
                 for (int i = listBooks.Count - 1; i >= 0; i--) {
                     if (listBooks[i].AuthorId == listAuthors[SelectedAuthor].Id) listBooks.RemoveAt(i);
@@ -121,7 +121,7 @@ namespace Dz04._03._2024 {
                 return editBook;
             }
         }
-        private void EdBook() {
+        private void EdBook()  {
             IsBook = IsSafe = true;
             IsCombo = IsExecute = false;
             value = 3;
@@ -140,7 +140,7 @@ namespace Dz04._03._2024 {
             if (res == DialogResult.Yes) listBooks?.Remove(listBooks?[SelectedBook]);
         }
         private void Filter() {
-            if(SelectedAuthor != -1) {
+            if (SelectedAuthor != -1) {
                 if (IsFilter) {
                     listBooks = new ObservableCollection<BooksVM>(listBooks.Where(
                     b => b.AuthorId == listAuthors?[SelectedAuthor].Id));
@@ -183,7 +183,7 @@ namespace Dz04._03._2024 {
                 OnPropertyChanged(nameof(EditBook));
             }
         }
-        public string EditAuthor{
+        public string EditAuthor {
             get { return editauthor; }
             set {
                 editauthor = value;
@@ -235,11 +235,9 @@ namespace Dz04._03._2024 {
         }
     }
     public class AuthorsVM : BaseVM {
-        private AuthorsM author;
-        public AuthorsVM(AuthorsM a) => author = a;
-        public int Id {
-            get { return author.Id; }
-        }
+        private Author author;
+        public AuthorsVM(Author a) => author = a;
+        public int Id { get { return author.Id; } }
         public string FullName {
             get { return author?.FullName!; }
             set {
@@ -249,8 +247,8 @@ namespace Dz04._03._2024 {
         }
     }
     public class BooksVM : BaseVM {
-        private BooksM book;
-        public BooksVM(BooksM b) => book = b;
+        private Book book;
+        public BooksVM(Book b) => book = b;
         public string Title {
             get { return book?.Title!; }
             set {
@@ -258,8 +256,6 @@ namespace Dz04._03._2024 {
                 OnPropertyChanged(nameof(Title));
             }
         }
-        public int? AuthorId {
-            get { return book.AuthorId; }
-        }
+        public int? AuthorId { get { return book.AuthorId; } }
     }
 }

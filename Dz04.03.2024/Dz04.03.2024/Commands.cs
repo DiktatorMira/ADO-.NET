@@ -9,9 +9,9 @@ namespace Dz04._03._2024 {
     public class Command : ICommand {
         Action<object> execute;
         Predicate<object> canExecute;
-        public Command(Action<object> exec, Predicate<object> can) {
+        public Command(Action<object> execute, Predicate<object> can) {
             if (execute == null) throw new ArgumentNullException("execute");
-            execute = exec;
+            this.execute = execute;
             canExecute = can;
         }
         public event EventHandler? CanExecuteChanged {

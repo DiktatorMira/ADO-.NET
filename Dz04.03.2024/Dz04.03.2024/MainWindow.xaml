@@ -8,11 +8,12 @@
         WindowStartupLocation="CenterScreen"
         Background="#262626"
         Title="Авторы и книги v2" 
-        Height="400" Width="600"
-        MinHeight="360" MinWidth="400" Icon="/appicon.png">
+        Height="420" Width="600"
+        MinHeight="400" MinWidth="400" Icon="/appicon.png">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="269*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.07*"/>
@@ -21,7 +22,7 @@
             <RowDefinition Height="0.15*"/>
             <RowDefinition Height="0.15*"/>
         </Grid.RowDefinitions>
-        <Menu Name="menu" Style="{StaticResource MenuStyle}">
+        <Menu Name="menu" Style="{StaticResource MenuStyle}" Grid.ColumnSpan="2" Margin="0,0,0,38" Grid.RowSpan="2">
             <MenuItem Header="Выполнить" FocusVisualStyle="{x:Null}" IsEnabled="{Binding IsExecute}">
                 <MenuItem Style="{StaticResource MenuItemStyle}" Header="Добавить автора" 
                 Command="{Binding AddAuthorCommand}"/>
@@ -39,13 +40,13 @@
             <MenuItem Header="Сохранить изменения" FocusVisualStyle="{x:Null}" IsEnabled="{Binding IsSafe}"/>
         </Menu>
         <ComboBox Style="{StaticResource ComboBoxStyle}" Grid.Row="1" SelectedItem="{Binding SelectedAuthor, Mode=TwoWay}" 
-        ItemsSource="{Binding listAuthors}" IsEnabled="{Binding IsCombo}" DisplayMemberPath="FullName">
+        ItemsSource="{Binding listAuthors}" IsEnabled="{Binding IsCombo}" DisplayMemberPath="FullName" Grid.ColumnSpan="2" Margin="3,0,3,0">
             <ComboBox.ItemContainerStyle>
                 <StaticResource ResourceKey="ComboBoxItemStyle"/>
             </ComboBox.ItemContainerStyle>
         </ComboBox>
         <ListBox Style="{StaticResource ListBoxStyle}" Grid.Row="2" ItemsSource="{Binding listBooks, Mode=TwoWay}"
-        SelectedIndex="{Binding SelectedBook, Mode=TwoWay}">
+        SelectedIndex="{Binding SelectedBook, Mode=TwoWay}" Grid.ColumnSpan="2" Margin="3,3,3,3">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="Template">
@@ -75,7 +76,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,252,0,0" Grid.RowSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -84,6 +85,6 @@
             <TextBox Style="{StaticResource TextBoxStyle}" Text="{Binding EditBook}" 
             IsEnabled="{Binding IsAuthor}" Grid.Column="1"/>
         </Grid>
-        <CheckBox Style="{StaticResource CheckBoxStyle}" Grid.Row="4" IsChecked="{Binding IsFilter}">Фильтрация</CheckBox>
+        <CheckBox Style="{StaticResource CheckBoxStyle}" Grid.Row="4" IsChecked="{Binding IsFilter}" Grid.Column="1" HorizontalAlignment="Left" Margin="186,0,0,0">Фильтрация</CheckBox>
     </Grid>
 </Window>
