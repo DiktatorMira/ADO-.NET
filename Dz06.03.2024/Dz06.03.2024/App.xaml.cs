@@ -11,9 +11,9 @@ namespace Dz06._03._2024 {
             try {
                 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("ua-UA");
                 CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("ua-UA");
-                using (var context = new Context()) {
+                using (var db = new Context()) {
                     MainWindow view = new MainWindow();
-                    var viewmodel = new MainVM(context.Positions, context.Employees);
+                    var viewmodel = new MainVM(db.Positions, db.Employees);
                     view.DataContext = viewmodel;
                     view.Show();
                 }

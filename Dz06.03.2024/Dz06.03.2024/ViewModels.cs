@@ -28,7 +28,7 @@ namespace Dz06._03._2024 {
             Employees = new ObservableCollection<EmployeesVM>(employees.Select(e => new EmployeesVM(e)));
             tempEmployees = Employees;
         }
-        private bool IsSelectEmployeeAndPosition() { return SelectedEmployee != -1 && SelectedPosition != -1; }
+        private bool IsSelectEmployee() { return SelectedEmployee != -1; }
         private bool IsSelectedPosition() { return SelectedPosition != 1; }
         public ICommand SaveChangesCommand {
             get {
@@ -37,30 +37,24 @@ namespace Dz06._03._2024 {
             }
         }
         private void SaveChanges() {
-            int pos = 1;
             switch (value) {
                 case 0:
                     if (EditName == string.Empty) return;
                     if (!Positions.Any(p => p.Title != null && p.Title == EditPosition)) return;
-                    for (int i = 0; i < Positions.Count; i++) {
-                        if (EditPosition == Positions[i].Title) pos = Positions[i].Id;
-                    }
+                    PositionsVM? selectedPositionVM = Positions.FirstOrDefault(p => p.Title == EditPosition);
+                    PositionsM selectedPosition = selectedPositionVM.ToModel();
                     EmployeesVM newEmployee = new EmployeesVM(
                         new EmployeesM {
                             Id = Employees.Count + 1,
                             FullName = EditName,
-                            PositionId = pos
+                            Position = selectedPosition
                         }
                     );
                     Employees.Add(newEmployee);
                     break;
                 case 1:
                     if (EditName == string.Empty) return;
-                    if (!Positions.Any(p => p.Title != null && p.Title == EditPosition)) return;
                     Employees[SelectedEmployee].FullName = EditName;
-                    for (int i = 0; i < Positions.Count; i++) {
-                        if(EditPosition == Positions[i].Title) Employees[SelectedEmployee].PositionId = Positions[i].Id;
-                    }
                     break;
                 case 2:
                     if (EditPosition == string.Empty) return;
@@ -96,20 +90,20 @@ namespace Dz06._03._2024 {
         }
         public ICommand ChangeEmployeeCommand {
             get {
-                if (changeEmployee == null) changeEmployee = new Command(exec => ChangeEmployee(), can => IsSelectEmployeeAndPosition());
+                if (changeEmployee == null) changeEmployee = new Command(exec => ChangeEmployee(), can => IsSelectEmployee());
                 return changeEmployee;
             }
         }
         public void ChangeEmployee() {
-            IsName = IsPosition = IsSave = true;
+            IsName = IsSave = true;
             IsExecute = false;
             value = 1;
             EditName = Employees[SelectedEmployee].FullName;
-            EditPosition = Employees[SelectedEmployee].PositionId.ToString();
+            EditPosition = Employees[SelectedEmployee].Title ?? string.Empty;
         }
         public ICommand DeleteEmployeeCommand {
             get {
-                if (deleteEmployee == null) deleteEmployee = new Command(exec => DeleteEmployee(), can => IsSelectEmployeeAndPosition());
+                if (deleteEmployee == null) deleteEmployee = new Command(exec => DeleteEmployee(), can => IsSelectEmployee());
                 return deleteEmployee;
             }
         }
@@ -154,7 +148,7 @@ namespace Dz06._03._2024 {
             if (res == DialogResult.Yes) {
                 Positions?.Remove(Positions[SelectedPosition]);
                 for (int i = Employees.Count - 1; i >= 0; i--) {
-                    if (Employees[i].PositionId == Positions?[SelectedPosition].Id) Employees.RemoveAt(i);
+                    if (Employees[i].Title == Positions?[SelectedPosition].Title) Employees.RemoveAt(i);
                 }
             }
         }
@@ -162,7 +156,7 @@ namespace Dz06._03._2024 {
             if (SelectedPosition != -1) {
                 if (IsFilter) {
                     Employees = new ObservableCollection<EmployeesVM>(Employees.Where(
-                    e => e.PositionId == Positions?[SelectedPosition].Id));
+                    e => e.Title == Positions?[SelectedPosition].Title));
                 }
                 else Employees = new ObservableCollection<EmployeesVM>(tempEmployees);
             }
@@ -260,17 +254,17 @@ namespace Dz06._03._2024 {
                 }
             }
         }
+        public PositionsM ToModel() {
+            return new PositionsM {
+                Id = this.Id,
+                Title = this.Title
+            };
+        }
     }
     public class EmployeesVM : BaseVM {
         private EmployeesM employee;
         public EmployeesVM(EmployeesM e) => employee = e ?? throw new ArgumentNullException(nameof(e));
-        public int PositionId {
-            get => employee.PositionId;
-            set {
-                employee.PositionId = value;
-                OnPropertyChanged(nameof(PositionId));
-            }
-        }
+        public string? Title => employee.Position?.Title;
         public string FullName {
             get => employee.FullName;
             set {
