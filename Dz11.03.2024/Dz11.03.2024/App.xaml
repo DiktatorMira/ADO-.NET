@@ -1,0 +1,54 @@
+﻿<Application x:Class="Dz11._03._2024.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Dz11._03._2024"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="MenuStyle" TargetType="Menu">
+            <Setter Property="Background" Value="#2e2e2e"/>
+            <Setter Property="Foreground" Value="#ababab"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="MenuItemStyle" TargetType="MenuItem">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#2e2e2e"/>
+            <Setter Property="Foreground" Value="#2e2e2e"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <Border Name="Border" BorderThickness="0" Margin="0,0,8,0">
+                            <ContentPresenter Content="{TemplateBinding Header}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="#ababab"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Background" Value="#1f1f1f"/>
+                                <Setter Property="Foreground" Value="#3d3d3d"/>
+                            </Trigger>
+                            <Trigger Property="IsHighlighted" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#404040"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#004c82"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="DataGridStyle" TargetType="DataGrid">
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Background" Value="#2e2e2e"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontFamily" Value="Bahnschrift SemiBold"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="AutoGenerateColumns" Value="True"/>
+        </Style>
+    </Application.Resources>
+</Application>
