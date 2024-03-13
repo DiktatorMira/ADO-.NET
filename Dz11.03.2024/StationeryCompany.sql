@@ -1,7 +1,6 @@
 Create database StationeryCompany;
 Go Use StationeryCompany;
 
-Go
 Create table Products(
 	id int not null primary key identity(1,1),
 	title nvarchar(50) not null,
