@@ -1,5 +1,11 @@
-Create database StationeryCompany;
-Use StationeryCompany;
+If DB_ID('StationeryCompany') is null Begin
+    Create database StationeryCompany;
+End
+Else Begin
+    Drop database StationeryCompany;
+	Create database StationeryCompany;
+End 
+Go Use StationeryCompany;
 
 Create table Products(
 	id int not null primary key identity(1,1),
@@ -28,22 +34,19 @@ Create table Sales(
 	price decimal(10,2) not null,
 	sale_date date not null
 );
-
 Insert into Products values('Карандаши', 'Рисовальные', 100, 1.5),
 ('Бумага', 'Офисная', 200, 10.0), ('Ручки', 'Гелевые', 150, 2.0);
-
 Insert into Managers values ('Иван', 'Иванов', 'ivan.ivanov@example.com'),
 ('Мария', 'Петрова', 'maria.petrova@example.com'),
 ('Алексей', 'Сидоров', 'alexey.sidorov@example.com');
-
 Insert into Companies values ('ООО "ОфисСервис"', 'info@officeservice.com'),
 ('ИП "КанцТовары"', 'info@kanc-tovary.ua'),
 ('ЗАО "Бумага"', 'info@zao-bumaga.com');
-
 Insert into Sales values (1, 1, 1, 50, 75.0, '2024-02-14'),
 (2, 2, 2, 20, 200.0, '2024-02-15'),(3, 3, 3, 30, 60.0, '2024-02-16');
 
-Go CREATE PROCEDURE GetAllTablesData
+Go
+CREATE PROCEDURE GetAllTablesData
 AS BEGIN
     SELECT Sales.sales_number, Products.title AS product_title,
     Products.type, Products.amount, Products.price,
@@ -54,13 +57,14 @@ AS BEGIN
     JOIN Managers ON Sales.manager_id = Managers.id
     JOIN Companies ON Sales.company_id = Companies.id;
 END;
-
-Go CREATE FUNCTION GetProductTypes()
+Go
+CREATE FUNCTION GetProductTypes()
 RETURNS TABLE AS RETURN (
     SELECT DISTINCT type
     FROM Products
 );
-Go CREATE FUNCTION GetSalesManagers()
+Go
+CREATE FUNCTION GetSalesManagers()
 RETURNS TABLE AS RETURN (
     SELECT DISTINCT
         m.id AS ManagerId,
@@ -71,7 +75,8 @@ RETURNS TABLE AS RETURN (
         Sales s
         INNER JOIN Managers m ON s.manager_id = m.id
 );
-Go CREATE FUNCTION GetProductsMaxQuantity()
+Go
+CREATE FUNCTION GetProductsMaxQuantity()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
@@ -81,7 +86,8 @@ RETURNS TABLE AS RETURN (
     FROM Products p
     WHERE p.amount = (SELECT MAX(amount) FROM Products)
 );
-Go CREATE FUNCTION GetProductsMinQuantity()
+Go
+CREATE FUNCTION GetProductsMinQuantity()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
