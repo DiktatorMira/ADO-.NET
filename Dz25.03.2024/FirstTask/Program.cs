@@ -44,9 +44,6 @@ namespace FirstTask {
                     Console.WriteLine("22) Удалить город");
                     Console.WriteLine("23) Удалить раздел");
                     Console.WriteLine("24) Удалить акционный товар");
-                    Console.WriteLine("25) Отобразить города конкретной страны");
-                    Console.WriteLine("26) Отобразить разделы конкретного покупателя");
-                    Console.WriteLine("27) Отобразить акционные товары конкретного раздела");
                     Console.Write("\nВведите значение: ");
                     string res = Console.ReadLine()!.ToString();
                     using (IDbConnection db = new SqlConnection(connection)) {
@@ -136,7 +133,6 @@ namespace FirstTask {
                                 ShowChapterProducts(db);
                                 break;
                             default:
-                                DeleteProduct(db);
                                 continue;
                         }
                         Console.Write("\nНажмите любую клавишу для продолжения...");
@@ -152,7 +148,7 @@ namespace FirstTask {
             foreach (var buyer in buyers) Console.WriteLine($"Покупатель #{++iter}: {buyer.FullName}, Email: {buyer.Email}");
         }
         static void ShowEmailBuyers(IDbConnection db) {
-            List<Buyer> emails = db.Query<Buyer>("SELECT Email FROM Buyer").ToList();
+            List<Buyer> emails = db.Query<Buyer>("SELECT Email FROM Buyers").ToList();
             int iter = 0;
             foreach (var email in emails) Console.WriteLine($"Email покупателя #{++iter}: {email}");
         }
@@ -486,7 +482,7 @@ namespace FirstTask {
             Console.WriteLine("Введите название страны:");
             string countryName = Console.ReadLine()!.ToString();
             int countryId = db.Query<int>(@"SELECT Id FROM Countries WHERE Title = @countryName", new { countryName }).FirstOrDefault();
-            var cities = db.Query<City>(@"SELECT * FROM City WHERE CountryId = @countryId", new { countryId } );
+            var cities = db.Query<City>(@"SELECT * FROM Cities WHERE CityId = @countryId", new { countryId } );
             if (cities.Count() > 0) {
                 foreach (var city in cities) Console.WriteLine(city.Title);
             }
@@ -496,7 +492,7 @@ namespace FirstTask {
             Console.Write("Введите имя покупателя: ");
             string buyerName = Console.ReadLine()!.ToString();
             int buyerId = db.Query<int>(@"SELECT Id FROM Buyers WHERE FullName = @buyerName", new { buyerName } ).FirstOrDefault();
-            var chapters = db.Query<Chapter>(@"SELECT * FROM Chapter WHERE BuyerId = @buyerId", new { buyerId } );
+            var chapters = db.Query<Chapter>(@"SELECT * FROM Chapters WHERE BuyerId = @buyerId", new { buyerId } );
             if (chapters.Count() > 0) {
                 foreach (var chapter in chapters) Console.WriteLine(chapter.Title);
             }
