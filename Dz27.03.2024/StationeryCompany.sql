@@ -5,7 +5,7 @@ Else Begin
     Drop database StationeryCompany;
 	Create database StationeryCompany;
 End 
-Go Use StationeryCompany;
+Use StationeryCompany;
 
 Create table Products(
 	id int not null primary key identity(1,1),
@@ -57,13 +57,13 @@ AS BEGIN
     JOIN Managers ON Sales.manager_id = Managers.id
     JOIN Companies ON Sales.company_id = Companies.id;
 END;
-Go
+
 CREATE FUNCTION GetProductTypes()
 RETURNS TABLE AS RETURN (
     SELECT DISTINCT type
     FROM Products
 );
-Go
+
 CREATE FUNCTION GetSalesManagers()
 RETURNS TABLE AS RETURN (
     SELECT DISTINCT
@@ -75,7 +75,6 @@ RETURNS TABLE AS RETURN (
         Sales s
         INNER JOIN Managers m ON s.manager_id = m.id
 );
-Go
 CREATE FUNCTION GetProductsMaxQuantity()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
@@ -86,7 +85,6 @@ RETURNS TABLE AS RETURN (
     FROM Products p
     WHERE p.amount = (SELECT MAX(amount) FROM Products)
 );
-Go
 CREATE FUNCTION GetProductsMinQuantity()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
@@ -97,7 +95,7 @@ RETURNS TABLE AS RETURN (
     FROM Products p
     WHERE p.amount = (SELECT MIN(amount) FROM Products)
 );
-Go CREATE FUNCTION GetProductsMinCost()
+CREATE FUNCTION GetProductsMinCost()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
@@ -107,7 +105,7 @@ RETURNS TABLE AS RETURN (
     FROM Products p
     WHERE p.price = (SELECT MIN(price) FROM Products)
 );
-Go CREATE FUNCTION GetProductsMaxCost()
+CREATE FUNCTION GetProductsMaxCost()
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
@@ -117,13 +115,13 @@ RETURNS TABLE AS RETURN (
     FROM Products p
     WHERE p.price = (SELECT MAX(price) FROM Products)
 );
-Go CREATE FUNCTION GetProductsByType(@productType NVARCHAR(50))
+CREATE FUNCTION GetProductsByType(@productType NVARCHAR(50))
 RETURNS TABLE AS RETURN (
     SELECT p.type AS ProductType
     FROM Products p
     WHERE p.type = @productType
 );
-Go CREATE FUNCTION GetProductsSoldByManager(@managerId INT)
+CREATE FUNCTION GetProductsSoldByManager(@managerId INT)
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
@@ -134,7 +132,7 @@ RETURNS TABLE AS RETURN (
     JOIN Sales s ON p.id = s.product_id
     WHERE s.manager_id = @managerId
 );
-Go CREATE FUNCTION GetProductsPurchasedByCompany(@companyId INT)
+CREATE FUNCTION GetProductsPurchasedByCompany(@companyId INT)
 RETURNS TABLE AS RETURN (
     SELECT p.id AS ProductId,
            p.title AS ProductTitle,
@@ -145,7 +143,7 @@ RETURNS TABLE AS RETURN (
     JOIN Sales s ON p.id = s.product_id
     WHERE s.company_id = @companyId
 );
-Go CREATE FUNCTION GetLatestSalesInfo()
+CREATE FUNCTION GetLatestSalesInfo()
 RETURNS TABLE AS RETURN (
     SELECT 
         p.id AS ProductId,
@@ -162,7 +160,7 @@ RETURNS TABLE AS RETURN (
         Products p
         JOIN Sales s ON p.id = s.product_id
 );
-Go CREATE FUNCTION GetAverageProductAmountByType()
+CREATE FUNCTION GetAverageProductAmountByType()
 RETURNS TABLE AS RETURN (
     SELECT 
         p.type AS ProductType,
@@ -173,7 +171,7 @@ RETURNS TABLE AS RETURN (
         p.type
 );
 
-Go CREATE PROCEDURE AddProduct
+CREATE PROCEDURE AddProduct
     @Title NVARCHAR(50),
     @Type NVARCHAR(50),
     @Amount INT,
@@ -184,14 +182,14 @@ BEGIN
     VALUES (@Title, @Type, @Amount, @Price);
 END
 
-Go CREATE PROCEDURE InsertTypeProduct
+CREATE PROCEDURE InsertTypeProduct
     @Type NVARCHAR(50)
 AS BEGIN
     INSERT INTO Products (type)
     VALUES (@Type);
 END
 
-Go CREATE PROCEDURE AddManager
+CREATE PROCEDURE AddManager
     @Name NVARCHAR(50),
     @Surname NVARCHAR(50),
     @Email NVARCHAR(50)
@@ -199,13 +197,13 @@ AS BEGIN
     INSERT INTO Managers VALUES (@Name, @Surname, @Email);
 END
 
-Go CREATE PROCEDURE AddCompany
+CREATE PROCEDURE AddCompany
     @Title NVARCHAR(50), @Email NVARCHAR(50)
 AS BEGIN
     INSERT INTO Companies VALUES (@Title, @Email);
 END
 
-Go CREATE PROCEDURE UpdateProduct
+ CREATE PROCEDURE UpdateProduct
 	@Title nvarchar(50), @Type nvarchar(50),
 	@Amount int, @Price decimal(10,2)
 AS BEGIN
@@ -213,49 +211,49 @@ AS BEGIN
      amount = @Amount, @Price = price WHERE id = id;
 END
 
-Go CREATE PROCEDURE UpdateCompanies
+ CREATE PROCEDURE UpdateCompanies
 	@Title nvarchar(50), @Email nvarchar(50)
 AS BEGIN
      UPDATE Companies SET title = @Title, email = @Email
      WHERE id = id;
 END
 
-Go CREATE PROCEDURE UpdateManagers
+ CREATE PROCEDURE UpdateManagers
 	@Name nvarchar(50), @Surname nvarchar(50), @Email nvarchar(50)
 AS BEGIN
      UPDATE Managers SET name = @Name, surname = @Surname, 
 	 email = @Email WHERE id = id;
 END
 
-Go CREATE PROCEDURE UpdateTypeProduct
+CREATE PROCEDURE UpdateTypeProduct
 	@Type nvarchar(50)
 AS BEGIN
      UPDATE Products SET type = @Type
      WHERE id = id;
 END
 
-Go CREATE PROCEDURE DeleteProduct
+ CREATE PROCEDURE DeleteProduct
     @ProductId int
 AS BEGIN
     DELETE FROM Products
     WHERE id = @ProductId;
 END
 
-Go CREATE PROCEDURE DeleteManager
+ CREATE PROCEDURE DeleteManager
     @ManagerId int
 AS BEGIN
     DELETE FROM Managers
     WHERE id = @ManagerId;
 END
 
-Go CREATE PROCEDURE DeleteTypeProduct
+ CREATE PROCEDURE DeleteTypeProduct
     @Type nvarchar(50)
 AS BEGIN
     DELETE FROM Products
     WHERE type = @Type;
 END
 
-Go CREATE PROCEDURE DeleteCompany
+ CREATE PROCEDURE DeleteCompany
     @CompanyId int
 AS BEGIN
     DELETE FROM Companies
